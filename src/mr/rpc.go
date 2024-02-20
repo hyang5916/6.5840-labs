@@ -23,6 +23,36 @@ type ExampleReply struct {
 }
 
 // Add your RPC definitions here.
+type GiveTaskArgs struct {
+
+}
+
+type GiveTaskReply struct {
+	FileName string
+	FileNameList []string // Only if reduce
+	TaskID int
+	TaskType string // Either "map" or "reduce" or "done"
+	NReduce int
+}
+
+type CompleteTaskArgs struct {
+	FileName string
+	TaskID int
+	IntermediateFiles map[int][]string
+}
+
+type CompleteTaskReply struct {
+
+}
+
+type ReduceTaskFileArgs struct {
+	FileName string
+	TaskID int
+}
+
+type ReduceTaskFileReply struct {
+
+}
 
 
 // Cook up a unique-ish UNIX-domain socket name
