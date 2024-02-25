@@ -7,6 +7,7 @@ type PutAppendArgs struct {
 	// You'll have to add definitions here.
 	// Field names must start with capital letters,
 	// otherwise RPC will break.
+	ID int64 // The unique ID for the operation.
 }
 
 type PutAppendReply struct {
